@@ -3,9 +3,9 @@ from pygame import display
 
 class Screen:
     def __init__(self, width, height):
-        self.width = width
-        self.height = height
+        self.display = display
+        self.surface = self.display.set_mode((width, height))
 
-    def display(self, caption: str):
-        display.set_caption(caption)
-        display.set_mode((self.width, self.height))
+    def fill(self, color):
+        self.surface.fill(color=color)
+        self.display.flip()

@@ -2,7 +2,7 @@ import pygame
 from pygameData.Screen import Screen
 
 screen = Screen(500, 500)
-screen.display("Hello")
+screen.fill((255, 255, 0))
 
 running = True
 while running:
