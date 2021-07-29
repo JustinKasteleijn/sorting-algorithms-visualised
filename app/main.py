@@ -7,11 +7,12 @@ class App:
         self.running = False
         pygame.init()
 
-    def run(self):
-        screen = Screen(500, 500)
-        screen.fill((255, 255, 0))
+    def run(self) -> None:
+        screen = Screen(800, 700)
+        screen.fill((255, 255, 255))
         self.running = True
         while self.running:
+            screen.draw(integers=[50, 500, 30])
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False
